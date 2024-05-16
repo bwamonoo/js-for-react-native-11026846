@@ -1,5 +1,5 @@
 
-function processArray(numbers) {
+const processArray = (numbers) => {
 	return numbers.map((number) => {
 		if(number % 2 == 0) {
 			return number ** 2;
@@ -15,7 +15,7 @@ console.log(processArray(arrayNum));
 
 
 
-function formatArrayStrings(arrayString, arrayNumber) {
+const formatArrayStrings = (arrayString, arrayNumber) => {
 	if(arrayString.length == arrayNumber.length) {
 		return arrayString.map((text, index) => {
 			return(arrayNumber[index] % 2 == 0)
@@ -27,6 +27,13 @@ function formatArrayStrings(arrayString, arrayNumber) {
 	return false;
 }
 
-arrayText = ['hi', 'hello', 'hey', 'yo', 'man', 'bro', 'gee'];
+arrayText = ['Hi', 'Hello', 'Hey', 'Yo', 'Man', 'Bro', 'Gee'];
 
 console.log(formatArrayStrings(arrayText, processArray(arrayNum)));
+
+module.exports = {
+	arrayNum,
+	arrayText,
+	processArray,
+	formatArrayStrings
+};
