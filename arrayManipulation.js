@@ -9,6 +9,24 @@ function processArray(numbers) {
 	});
 }
 
-array = [3,6,4,8,7,9,5];
+arrayNum = [3,6,4,8,7,9,5];
 
-console.log(processArray(array));
+console.log(processArray(arrayNum));
+
+
+
+function formatArrayStrings(arrayString, arrayNumber) {
+	if(arrayString.length == arrayNumber.length) {
+		return arrayString.map((text, index) => {
+			return(arrayNumber[index] % 2 == 0)
+						? text.toUpperCase()
+						: text.toLowerCase();
+		});
+	}
+
+	return false;
+}
+
+arrayText = ['hi', 'hello', 'hey', 'yo', 'man', 'bro', 'gee'];
+
+console.log(formatArrayStrings(arrayText, processArray(arrayNum)));
